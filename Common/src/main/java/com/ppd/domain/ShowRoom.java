@@ -42,7 +42,11 @@ public class ShowRoom implements Entity<Long> {
         return shows;
     }
 
-    public void setShows(List<Show> shows) {
-        this.shows = shows;
+    public long getSeatCount() {
+        return seatCount;
+    }
+
+    public String toString() {
+        return "ShowRoom(id=" + this.getId() + ", seatCount=" + this.seatCount + ", shows=" + this.getShows() + ")";
     }
 }

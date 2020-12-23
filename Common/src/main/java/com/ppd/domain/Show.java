@@ -54,12 +54,17 @@ public class Show implements Entity<Long> {
         return sales;
     }
 
-    public void setSales(List<Sale> sales) {
-        this.sales = sales;
+    public Currency getTicketPrice() {
+        return ticketPrice;
     }
 
     @Override
     public Long getId() {
         return id;
+    }
+
+    public String toString() {
+        return "Show(id=" + this.getId() + ", showDate=" + this.showDate + ", title=" + this.title + ", ticketPrice=" + this.ticketPrice + ", sales=" + this
+                .getSales() + ", showRoom=" + this.showRoom.getId() + ")";
     }
 }

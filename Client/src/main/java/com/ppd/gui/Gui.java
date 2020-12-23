@@ -5,8 +5,8 @@ import com.ppd.service.IAppServices;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Gui{
-    public static void run(String[] args) throws Exception{
+public class Gui {
+    public static void run(String[] args) throws Exception {
 //        launch(args);
         start();
     }

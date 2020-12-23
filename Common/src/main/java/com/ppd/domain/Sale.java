@@ -45,22 +45,13 @@ public class Sale implements Entity<Long> {
         return soldSeats;
     }
 
-    public void setSoldSeats(Set<Integer> soldSeats) {
-        this.soldSeats = soldSeats;
-    }
-
     @Override
     public Long getId() {
         return id;
     }
 
-    @Override
     public String toString() {
-        return "Sale{" +
-                "id=" + id +
-                ", show=" + show +
-                ", soldSeats=" + soldSeats +
-                ", saleDate=" + saleDate +
-                '}';
+        return "Sale(id=" + this.getId() + ", show=" + this.show.getId() + ", soldSeats=" + this.getSoldSeats() + ", " +
+                "saleDate=" + this.saleDate + ")";
     }
 }

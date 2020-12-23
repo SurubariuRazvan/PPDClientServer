@@ -1,5 +1,7 @@
 package com.ppd.domain;
 
-public interface Entity<ID> {
+import java.io.Serializable;
+
+public interface Entity<ID> extends Serializable {
     public ID getId();
 }

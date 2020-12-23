@@ -2,9 +2,10 @@ package com.ppd.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Embeddable
-public class Currency {
+public class Currency implements Serializable {
     @Column(name = "value")
     private double value;
 
@@ -19,19 +20,23 @@ public class Currency {
     public Currency() {
     }
 
-    public double getValue() {
-        return value;
+    public void add(Currency currency) {
+        if (!this.currency.equals(currency.getCurrency()))
+            throw new RuntimeException("Different currency type.");
+        this.value += currency.value;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+    public Currency multiply(int count) {
+        return new Currency(value * count, this.currency);
+    }
+
+    public double getValue() {
+        return value;
     }
 
     public String getCurrency() {
         return currency;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
+    public String toString() {return "Currency(value=" + this.getValue() + ", currency=" + this.getCurrency() + ")";}
 }

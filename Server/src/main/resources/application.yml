@@ -7,8 +7,8 @@ spring:
         create-drop
 #    show-sql:
 #      true
-#    generate-ddl:
-#      true
+    generate-ddl:
+      true
   datasource:
     platform:
       postgres
